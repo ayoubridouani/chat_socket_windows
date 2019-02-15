@@ -46,9 +46,9 @@ int main(void){
 	while(error == SOCKET_ERROR){
 	error = connect(client, (sockaddr*)&serverInformation, sizeof(serverInformation));
 		if(error == SOCKET_ERROR){
-			//printf("Connect failed with error : %d\n",WSAGetLastError());
-			//return end;
-		//}
+			printf("Connect failed with error : %d\n",WSAGetLastError());
+			return end;
+		}
 	}
 
 
